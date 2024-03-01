@@ -1,12 +1,20 @@
-# Farcaster Frames Market Price Prediction app
+# Farcaster Market Price Prediction Frames
 
-A simple Market Price Prediction app using [Farcaster Frames](https://warpcast.notion.site/Farcaster-Frames-4bd47fe97dc74a42a48d3a234636d8c5). 
+A simple Market Price Prediction app using [Farcaster Frames](https://warpcast.notion.site/Farcaster-Frames-4bd47fe97dc74a42a48d3a234636d8c5).
 
-This example lets you create a market pridiction poll and have users vote on it. Those who win the prediction will be rewarded an NFT after checking the price from oracle. 
+This example lets you create a market pridiction poll and have users vote on it. Those who win the prediction will be rewarded an NFT after checking the price from oracle.
+
+On-chain smart contracts and oracle price veirification are used.
+
+## Related Repos
+
+- [FC Prediction Scripts](https://github.com/starit/fc-prediction-scripts)
+- [FC Prediction Smart Contracts](https://github.com/starit/fc-prediction-contracts)
 
 ## Demo
 
 - [https://fc-market-price-polls.vercel.app/](https://fc-market-price-polls.vercel.app/)
+- [Warpcast Frames Developer Tool](https://warpcast.com/~/developers/frames)
 
 ### Launched Prediction Frame
 
