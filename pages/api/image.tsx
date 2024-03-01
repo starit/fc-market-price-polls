@@ -12,13 +12,14 @@ let fontData = fs.readFileSync(fontPath)
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     try {
         const pollId = req.query['id']
+        console.log('[handler] pollId', pollId)
         // const fid = parseInt(req.query['fid']?.toString() || '')
         if (!pollId) {
             return res.status(400).send('Missing poll ID');
         }
 
         let poll: Poll | null = await kv.hgetall(`poll:${pollId}`);
-
+        console.log('[handler] pool in redis', poll)
 
         if (!poll) {
             return res.status(400).send('Missing poll ID');
@@ -47,6 +48,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     return { option, votes, text, percentOfTotal }
                 })
         };
+        console.log(pollData);
 
         const svg = await satori(
             <div style={{
