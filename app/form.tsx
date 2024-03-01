@@ -35,12 +35,16 @@ export function PollCreateForm() {
   let pollStub = {
     id: uuidv4(),
     created_at: new Date().getTime(), // in ms
-    period: 24 * 3600 * 1000, // 1 day in ms
     title: "",
+    chain: "",
     description: "",
-    status: "open",
-    option1: "",
-    option2: "",
+    status: "open",  
+    period: 24 * 3600 * 1000, // 1 day in ms
+    expectedPrice: 0,
+    currency1: '',
+    currency2: 'USDC',
+    option1: "", // long
+    option2: "", // short
     option3: "",
     option4: "",
     votes1: 0,
@@ -95,25 +99,73 @@ export function PollCreateForm() {
                 type="text"
                 name="title"
             />
+
+                  <div className="block">
+                      <label className="block text-lg font-medium leading-6 text-gray-900">
+                          Currency:
+                      </label>
+                   
+                    <div>
+                          <select name="chain" id="chain"
+                              // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+
+                              className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border-gray-200 rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring focus:ring-inset focus:ring-blue-600 lg:max-w-xs lg:text-lg lg:leading-6"
+                          >
+                              <option value="btc">BTC</option>
+                              <option value="eth">ETH</option>
+                          </select>
+                      </div>
+                  </div>
+
+                  <div>
+                      <label htmlFor="chain" className="block text-lg font-medium leading-6 text-gray-900">
+                          Chain:
+                      </label>
+                      <select name="chain" id="chain"
+                          // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+
+                          className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border-gray-200 rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring focus:ring-inset focus:ring-blue-600 lg:max-w-xs lg:text-lg lg:leading-6"
+                      >
+                          <option value="Hedera">Hedera</option>
+                          <option value="Base">Base</option>
+                          <option value="Linea">Linea</option>
+                          <option value="Near">Near</option>
+                      </select>
+                  </div>
+
+            
+            <input
+                aria-label="ExpectedPrice"
+                className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+                maxLength={150}
+                placeholder="Input Expected Price"
+                required
+                type="text"
+                name="expectedPrice"
+            />
+            
             <input
                 aria-label="Option 1"
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
-                placeholder="Option 1"
+                placeholder="Bull📈"
                 required
-                type="text"
+                disabled
+                hidden
+                type="hidden" //Todo:: not secure
                 name="option1"
             />
             <input
                 aria-label="Option 2"
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
-                placeholder="Option 2"
+                placeholder="Bear📉"
                 required
-                type="text"
+                disabled
+                type="hidden"
                 name="option2"
             />
-            <input
+            {/* <input
                 aria-label="Option 3"
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
@@ -128,7 +180,7 @@ export function PollCreateForm() {
                 placeholder="Option 4 (optional)"
                 type="text"
                 name="option4"
-            />
+            /> */}
               <div className={"pt-2 flex justify-end"}>
                   <button
                       className={clsx(

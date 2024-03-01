@@ -37,7 +37,8 @@ export default async function Page() {
           Farcaster Market Price Prediction Poll
         </h1>
         <h2 className="text-md sm:text-xl mx-4">
-          Create a new poll with upto 4 options
+          Create a Farcaster Market Price Predicition Frames
+          and Win your exclusive NFT!
         </h2>
         <div className="flex flex-wrap items-center justify-around max-w-4xl my-8 sm:w-full bg-white rounded-md shadow-xl h-full border border-gray-100">
           <PollCreateForm />
