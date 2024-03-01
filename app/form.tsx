@@ -36,6 +36,8 @@ export function PollCreateForm() {
     id: uuidv4(),
     created_at: new Date().getTime(),
     title: "",
+    chain: "",
+    expectedPrice: 0,
     option1: "",
     option2: "",
     option3: "",
@@ -62,6 +64,8 @@ export function PollCreateForm() {
                 let newPoll = {
                   ...pollStub,
                   title: formData.get("title") as string,
+                  chain: formData.get("chain") as string,
+                  expectedPrice: formData.get("expectedPrice") as string,
                   option1: formData.get("option1") as string,
                   option2: formData.get("option2") as string,
                   option3: formData.get("option3") as string,
@@ -91,6 +95,30 @@ export function PollCreateForm() {
                 required
                 type="text"
                 name="title"
+            />
+            <div>
+                <label htmlFor="chain" className="block text-lg font-medium leading-6 text-gray-900">
+                    NFT Rewards Chain:
+                </label>
+                <select name="chain" id="chain"
+                    // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+
+                    className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border-gray-200 rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring focus:ring-inset focus:ring-blue-600 lg:max-w-xs lg:text-lg lg:leading-6"
+                >
+                    <option value="Hedera">Hedera</option>
+                    <option value="Base">Base</option>
+                    <option value="Linea">Linea</option>
+                    <option value="Near">Near</option>
+                </select>
+            </div>
+            <input
+                aria-label="ExpectedPrice"
+                className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+                maxLength={150}
+                placeholder="Input Expected Price"
+                required
+                type="text"
+                name="expectedPrice"
             />
             <input
                 aria-label="Option 1"
