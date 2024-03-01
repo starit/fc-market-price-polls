@@ -1,6 +1,6 @@
 # Farcaster Frames Market Price Prediction app
 
-A example Market Price Prediction app using [Farcaster Frames](https://warpcast.notion.site/Farcaster-Frames-4bd47fe97dc74a42a48d3a234636d8c5). 
+A simple Market Price Prediction app using [Farcaster Frames](https://warpcast.notion.site/Farcaster-Frames-4bd47fe97dc74a42a48d3a234636d8c5). 
 
 This example lets you create a market pridiction poll and have users vote on it. Those who win the prediction will be rewarded an NFT after checking the price from oracle. 
 
