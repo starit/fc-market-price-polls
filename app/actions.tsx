@@ -12,6 +12,7 @@ export async function savePoll(poll: Poll, formData: FormData) {
     title: formData.get("title") as string,
     chain: formData.get("chain") as string,
     expectedPrice: formData.get("expectedPrice") as string,
+    currency: formData.get("currency") as string,
     option1: formData.get("option1") as string,
     option2: formData.get("option2") as string,
     option3: formData.get("option3") as string,

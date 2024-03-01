@@ -1,6 +1,9 @@
 export type Poll = {
   id: string;
   title: string;
+  chain: string;
+  currency: string;
+  expectedPrice: number;
   option1: string;
   option2: string;
   option3: string;

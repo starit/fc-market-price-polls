@@ -38,6 +38,7 @@ export function PollCreateForm() {
     title: "",
     chain: "",
     expectedPrice: 0,
+    currency: "",
     option1: "",
     option2: "",
     option3: "",
@@ -65,7 +66,8 @@ export function PollCreateForm() {
                   ...pollStub,
                   title: formData.get("title") as string,
                   chain: formData.get("chain") as string,
-                  expectedPrice: formData.get("expectedPrice") as string,
+                  expectedPrice: formData.get("expectedPrice") as unknown as number,
+                  currency: formData.get("currency") as string,
                   option1: formData.get("option1") as string,
                   option2: formData.get("option2") as string,
                   option3: formData.get("option3") as string,
@@ -96,6 +98,22 @@ export function PollCreateForm() {
                 type="text"
                 name="title"
             />
+            <div className="block">
+                <label htmlFor="currency" className="block text-lg font-medium leading-6 text-gray-900">
+                    Currency:
+                </label>
+                <div>
+                    <select name="currency" id="currency"
+                        // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
+
+                        className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border-gray-200 rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring focus:ring-inset focus:ring-blue-600 lg:max-w-xs lg:text-lg lg:leading-6"
+                    >
+                        <option value="btc">BTC</option>
+                        <option value="eth">ETH</option>
+                    </select>
+                </div>
+            </div>
+
             <div>
                 <label htmlFor="chain" className="block text-lg font-medium leading-6 text-gray-900">
                     NFT Rewards Chain:

@@ -8,6 +8,9 @@ async function getPoll(id: string): Promise<Poll> {
     let nullPoll = {
         id: "",
         title: "No poll found",
+        chain: "",
+        expectedPrice: 0,
+        currency: "",
         option1: "",
         option2: "",
         option3: "",
