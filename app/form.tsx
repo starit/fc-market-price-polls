@@ -165,12 +165,12 @@ export function PollCreateForm() {
                 type="hidden"
                 name="option2"
             />
-            {/* <input
+            <input
                 aria-label="Option 3"
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
                 placeholder="Option 3 (optional)"
-                type="text"
+                type="hidden"
                 name="option3"
             />
             <input
@@ -178,9 +178,9 @@ export function PollCreateForm() {
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
                 placeholder="Option 4 (optional)"
-                type="text"
+                type="hidden"
                 name="option4"
-            /> */}
+            />
               <div className={"pt-2 flex justify-end"}>
                   <button
                       className={clsx(
