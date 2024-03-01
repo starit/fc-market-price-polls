@@ -8,6 +8,16 @@ This example lets you create a market pridiction poll and have users vote on it.
 
 - [https://fc-market-price-polls.vercel.app/](https://fc-market-price-polls.vercel.app/)
 
+### Launched Prediction Frame
+
+Notice: The Chain means the blockchain for user to receive the rewardings.
+
+- [Base][BTC] How will BTC's price change from $50,000 in a week? https://fc-market-price-polls.vercel.app/polls/37d99a88-280b-43e7-93df-97c0df5ecd31
+
+- [Linea][ETH] How will ETH's price change from $3,500 in a week? https://fc-market-price-polls.vercel.app/polls/cbc44873-f88d-47de-a1f6-701509610deb
+
+- [Hedera][BTC] How will BTC's price change from $50,000 in a week? https://fc-market-price-polls.vercel.app/polls/2b6fe656-cccf-4636-8c3b-ce85001c63e6
+
 
 ## Setup
 - After deploying your repo to Vercel...
