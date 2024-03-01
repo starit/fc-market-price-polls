@@ -106,7 +106,7 @@ export function PollCreateForm() {
                       </label>
                    
                     <div>
-                          <select name="chain" id="chain"
+                          <select name="currency1" id="currency1"
                               // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
 
                               className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border-gray-200 rounded-md py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring focus:ring-inset focus:ring-blue-600 lg:max-w-xs lg:text-lg lg:leading-6"
@@ -119,7 +119,7 @@ export function PollCreateForm() {
 
                   <div>
                       <label htmlFor="chain" className="block text-lg font-medium leading-6 text-gray-900">
-                          Chain:
+                          NFT Rewards Chain:
                       </label>
                       <select name="chain" id="chain"
                           // className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
@@ -149,6 +149,7 @@ export function PollCreateForm() {
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
                 placeholder="Bull📈"
+                value="Bull📈"
                 required
                 disabled
                 hidden
@@ -160,6 +161,7 @@ export function PollCreateForm() {
                 className="pl-3 pr-28 py-3 mt-1 text-lg block w-full border border-gray-200 rounded-md text-gray-900 placeholder-gray-400 focus:outline-none focus:ring focus:ring-blue-300"
                 maxLength={150}
                 placeholder="Bear📉"
+                value="Bear📉"
                 required
                 disabled
                 type="hidden"

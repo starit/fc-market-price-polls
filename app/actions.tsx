@@ -6,10 +6,14 @@ import {Poll, POLL_EXPIRY} from "./types";
 import {redirect} from "next/navigation";
 
 export async function savePoll(poll: Poll, formData: FormData) {
+  // console.log('savePoll', poll, formData);
   let newPoll = {
     ...poll,
     created_at: Date.now(),
     title: formData.get("title") as string,
+    currency1: formData.get("currency1") as string,
+    expectedPrice: formData.get('expectedPrice') as string,
+    chain: formData.get('chain') as string,
     option1: '📈Long ',
     option2: '📉Short',
     // option1: '📈Long ' + formData.get("expectedPrice") as string,
