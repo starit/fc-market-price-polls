@@ -2,15 +2,15 @@
 
 A simple Market Price Prediction app using [Farcaster Frames](https://warpcast.notion.site/Farcaster-Frames-4bd47fe97dc74a42a48d3a234636d8c5).
 
-This example lets you create a market pridiction poll and have users vote on it. Those who win the prediction will be rewarded an NFT after checking the price from oracle.
+This example lets you create a market prediction poll and have users vote on it. Those who win the prediction will be rewarded an NFT after checking the price from oracle.
 
-On-chain smart contracts and oracle price veirification are used.
+On-chain smart contracts and Oracle price verification are used.
 
 ## Related Repos
 
-- [FC Prediction Scripts](https://github.com/starit/fc-prediction-scripts)
-- [FC Prediction Smart Contracts](https://github.com/starit/fc-prediction-contracts)
-- [FC Prediction Frames](https://github.com/starit/fc-prediction-frames)
+- [Farcaster MarketSense Scripts](https://github.com/starit/fc-prediction-scripts)
+- [Farcaster MarketSense Smart Contracts](https://github.com/starit/fc-prediction-contracts)
+- [Farcaster MarketSense Frames](https://github.com/starit/fc-prediction-frames)
 
 ## Demo
 
@@ -19,7 +19,7 @@ On-chain smart contracts and oracle price veirification are used.
 
 ### Launched Prediction Frame
 
-Notice: The Chain means the blockchain for user to receive the rewardings.
+Notice: The Chain means the blockchain for users to receive the rewardings.
 
 - [Base][BTC] How will BTC's price change from $50,000 in a week? https://fc-market-price-polls.vercel.app/polls/37d99a88-280b-43e7-93df-97c0df5ecd31
 
