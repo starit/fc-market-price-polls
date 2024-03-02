@@ -93,8 +93,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           <meta name="fc:frame:image" content="${imageUrl}">
           <meta name="fc:frame:post_url" content="${process.env['HOST']}/api/vote?id=${poll.id}&voted=true&results=${results ? 'false' : 'true'}">
           <meta name="fc:frame:button:1" content="${button1Text}">
-          <meta name="fc:frame:button:2" content="Create your poll">
-          <meta name="fc:frame:button:2:action" content="post_redirect">
+          <meta name="fc:frame:button:2" content="Create your poll(Incoming)">
         </head>
         <body>
           <p>${ results || voted ? `You have already voted. You clicked ${buttonId}` : `Your vote for ${buttonId} has been recorded for fid ${fid}.` }</p>
