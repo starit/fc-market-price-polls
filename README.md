@@ -14,12 +14,13 @@ On-chain smart contracts and Oracle price verification are used.
 
 ## Demo
 
+- [Warpcast](https://warpcast.com/~/conversations/0x685ffaa3d034cfd50098092d33ba4e96d33fd05b)
 - [https://fc-market-price-polls.vercel.app/](https://fc-market-price-polls.vercel.app/)
 - [Warpcast Frames Developer Tool](https://warpcast.com/~/developers/frames)
 
 ### Launched Prediction Frame
 
-Notice: The Chain means the blockchain for users to receive the rewardings.
+Notice: The Chain means the blockchain for users to receive the rewards.
 
 - [Base][BTC] How will BTC's price change from $50,000 in a week? https://fc-market-price-polls.vercel.app/polls/37d99a88-280b-43e7-93df-97c0df5ecd31
 
@@ -34,4 +35,5 @@ Notice: The Chain means the blockchain for users to receive the rewardings.
 - Set the `KV` prefix url's for the new `kv` database
 - Navigate to env variables: https://vercel.com/gregan/fc-links-vote/settings/environment-variables
 - If you're doing something production facing w/ trusted data, set the `HUB_URL` environment variable to a production hub's public ip address port 2283 ref: https://docs.farcaster.xyz/reference/frames/spec#frame-signature-packet
-- Set the `HOST` env variable to your public facing url or domain, ie; `https://<project>.vercel.app/`
+- Set the `HOST` env variable to your public-facing url or domain, ie; `https://<project>.vercel.app/`
+- Redeploy to make the env variables effect.
